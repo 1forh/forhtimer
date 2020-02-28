@@ -6,7 +6,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Get Shit Done Timer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -68,7 +68,7 @@ module.exports = {
     extend(config, ctx) {},
   },
   sitemap: {
-    hostname: process.env.BASE_URL || 'https://learnmap.netlify.com',
+    hostname: process.env.BASE_URL || 'https://forhtimer.netlify.com',
     gzip: true,
   },
   bootstrapVue: {
@@ -92,9 +92,9 @@ module.exports = {
   pwa: {
     meta: false,
     manifest: {
-      name: 'Learn Map',
-      short_name: 'Learn Map',
-      description: 'Short description of Learn Map.',
+      name: 'Pomodoro Timer',
+      short_name: 'forhtimer',
+      description: '',
       theme_color: '#ffffff',
       background_color: '#ffffff',
       lang: 'en',
