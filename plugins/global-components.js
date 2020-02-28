@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import BaseCode from '@/components/BaseCode/BaseCode';
-import BaseButton from '@/components/BaseButton/BaseButton';
-import BaseLink from '@/components/BaseLink/BaseLink';
-import BaseHeading from '@/components/BaseHeading/BaseHeading';
-import BaseParagraph from '@/components/BaseParagraph/BaseParagraph';
-import BaseText from '@/components/BaseText/BaseText';
-import BaseIcon from '@/components/BaseIcon/BaseIcon';
-import BaseImage from '@/components/BaseImage/BaseImage';
+import BaseCode from '@/components/BaseCode';
+import BaseButton from '@/components/BaseButton';
+import BaseLink from '@/components/BaseLink';
+import BaseHeading from '@/components/BaseHeading';
+import BaseParagraph from '@/components/BaseParagraph';
+import BaseText from '@/components/BaseText';
+import BaseIcon from '@/components/BaseIcon';
+import BaseImage from '@/components/BaseImage';
 
 // custom components
 Vue.component('base-code', BaseCode);
