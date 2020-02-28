@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TheNavbar from '~/components/TheNavbar/TheNavbar';
+import TheNavbar from '~/components/TheNavbar';
 
 export default {
   components: {
