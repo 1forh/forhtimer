@@ -5,7 +5,13 @@
 </template>
 
 <script>
-export default {};
+import TheTimer from '@/components/TheTimer';
+
+export default {
+  components: {
+    TheTimer,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
