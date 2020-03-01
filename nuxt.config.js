@@ -35,14 +35,14 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/styles/main.scss', '@fortawesome/fontawesome-svg-core/styles.css'],
+  css: ['@/assets/styles/main.scss'],
   styleResources: {
     scss: ['@/assets/styles/base/_index.scss'],
   },
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/fontawesome.js', '@/plugins/global-components.js'],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,14 +50,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/style-resources',
-    'vue-balance-text/nuxt/module',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/pwa',
-  ],
+  modules: ['@nuxtjs/dotenv', '@nuxtjs/style-resources', '@nuxtjs/sitemap', '@nuxtjs/pwa'],
   /*
    ** Build configuration
    */
@@ -71,22 +64,9 @@ module.exports = {
     hostname: process.env.BASE_URL || 'https://forhtimer.netlify.com',
     gzip: true,
   },
-  bootstrapVue: {
-    bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false, // Or `bvCSS: false`
-    componentPlugins: [
-      'LayoutPlugin',
-      'FormPlugin',
-      'FormCheckboxPlugin',
-      'FormInputPlugin',
-      'ButtonPlugin',
-      'LinkPlugin',
-      'ImagePlugin',
-    ],
-  },
   webfontloader: {
     google: {
-      families: ['Open Sans:300,400,400i,600,700'], //Loads Lato font with weights 400 and 700
+      families: ['Open Sans:400,700'],
     },
   },
   pwa: {
@@ -98,9 +78,6 @@ module.exports = {
       theme_color: '#ffffff',
       background_color: '#ffffff',
       lang: 'en',
-    },
-    icons: {
-      iconSrc: 'client/static/placeholders/placeholder-green.png',
     },
   },
 };

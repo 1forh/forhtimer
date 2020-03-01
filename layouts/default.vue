@@ -1,6 +1,5 @@
 <template>
   <div>
-    <the-navbar />
     <main>
       <nuxt />
     </main>
@@ -8,13 +7,7 @@
 </template>
 
 <script>
-import TheNavbar from '~/components/TheNavbar';
-
-export default {
-  components: {
-    TheNavbar,
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped></style>

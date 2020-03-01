@@ -13,25 +13,13 @@
     "sb:build": "build-storybook"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.26",
-    "@fortawesome/free-brands-svg-icons": "^5.12.0",
-    "@fortawesome/free-regular-svg-icons": "^5.12.0",
-    "@fortawesome/free-solid-svg-icons": "^5.12.0",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/sitemap": "^2.0.1",
-    "bootstrap": "^4.4.1",
-    "bootstrap-vue": "^2.2.0",
     "cross-env": "^5.2.0",
     "express": "^4.17.1",
-    "lodash": "^4.17.15",
     "nuxt": "^2.11.0",
-    "nuxt-fontawesome": "^0.4.0",
-    "nuxt-webfontloader": "^1.1.0",
-    "prismjs": "^1.19.0",
-    "rfs": "^9.0.2",
-    "vue-balance-text": "^1.2.3"
+    "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
