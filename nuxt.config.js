@@ -10,7 +10,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'A no bullshit Pomodoro timer that helps you stay focused and get shit done.',
+      },
       {
         name: 'msapplication-TileColor',
         content: '#f7541e',
@@ -72,11 +76,11 @@ module.exports = {
   pwa: {
     meta: false,
     manifest: {
-      name: 'Pomodoro Timer',
+      name: 'Get Shit Done Timer',
       short_name: 'forhtimer',
-      description: '',
-      theme_color: '#ffffff',
-      background_color: '#ffffff',
+      description: 'A no bullshit Pomodoro timer that helps you stay focused and get shit done.',
+      theme_color: '#e27d60',
+      background_color: '#e27d60',
       lang: 'en',
     },
   },
