@@ -41,11 +41,15 @@ export default {
   props: {
     duration: {
       type: String,
-      default: '00:05',
+      default: '30:00',
     },
     breakDuration: {
       type: String,
-      default: '00:05',
+      default: '05:00',
+    },
+    audioFile: {
+      type: String,
+      default: '/audio/beep.mp3',
     },
   },
   data() {
@@ -56,6 +60,11 @@ export default {
       interval: null,
       onBreak: false,
     };
+  },
+  computed: {
+    audio() {
+      return new Audio(this.audioFile);
+    },
   },
   methods: {
     timeKeeper() {
@@ -68,6 +77,8 @@ export default {
       this.timer = timer.subtract(1, 'second').format('m:ss');
 
       if (this.timer === '0:00') {
+        this.audio.play();
+
         if (this.onBreak) {
           this.reset();
         } else {
