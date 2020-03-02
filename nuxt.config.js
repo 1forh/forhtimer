@@ -66,7 +66,7 @@ module.exports = {
   },
   webfontloader: {
     google: {
-      families: ['Open Sans:400,700'],
+      families: ['Open Sans:300,400,700'],
     },
   },
   pwa: {

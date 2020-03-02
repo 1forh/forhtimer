@@ -1,5 +1,8 @@
 <template>
   <div class="timer">
+    <div class="timer__message">
+      {{ message }}
+    </div>
     <div class="timer__clock">
       {{ timer }}
     </div>
@@ -38,31 +41,37 @@ export default {
   props: {
     duration: {
       type: String,
-      default: '25:00',
+      default: '00:05',
     },
     breakDuration: {
       type: String,
-      default: '5:00',
+      default: '00:05',
     },
   },
   data() {
     return {
+      message: 'Time to get shit done.',
       timer: this.duration,
       running: false,
       interval: null,
+      onBreak: false,
     };
   },
   methods: {
     timeKeeper() {
-      let start = moment(this.timer, 'm:ss');
-      let seconds = start.minutes() * 60;
+      if (!this.running) {
+        return;
+      }
 
-      if (this.running === true) {
-        this.timer = start.subtract(1, 'second').format('m:ss');
-        seconds--;
+      const timer = moment(this.timer, 'm:ss');
 
-        if (seconds === 0) {
-          clearInterval(this.interval);
+      this.timer = timer.subtract(1, 'second').format('m:ss');
+
+      if (this.timer === '0:00') {
+        if (this.onBreak) {
+          this.reset();
+        } else {
+          this.startBreak();
         }
       }
     },
@@ -72,11 +81,19 @@ export default {
     },
     pause() {
       this.running = false;
+      clearInterval(this.interval);
     },
     reset() {
+      this.message = 'Time to get shit done.';
       this.timer = this.duration;
       this.running = false;
       clearInterval(this.interval);
+    },
+    startBreak() {
+      this.pause();
+      this.onBreak = true;
+      this.message = 'Break time.';
+      this.timer = this.breakDuration;
     },
   },
 };
@@ -86,10 +103,18 @@ export default {
 .timer {
   width: 100%;
   height: 100vh;
-  margin-top: 5rem;
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__message {
+    margin-bottom: 3rem;
+    font-size: 48px;
+    font-weight: 300;
+    color: $white;
+    text-align: center;
+  }
 
   &__clock {
     font-size: 7.5rem;
